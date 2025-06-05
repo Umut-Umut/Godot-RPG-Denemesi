@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://icon.png" type="Texture" id=1]
 [ext_resource path="res://scripts/World.gd" type="Script" id=2]
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scenes/NPC.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=5]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
@@ -45,7 +46,16 @@ tile_data = PoolIntArray( 851968, 0, 0, 851997, 0, 0, 983039, 0, 0, 917534, 0, 0
 position = Vector2( 1007, 951 )
 
 [node name="NPC" parent="Entities" instance=ExtResource( 4 )]
-position = Vector2( 1577, 950 )
+position = Vector2( 1569, 998 )
 
 [node name="NPC2" parent="Entities" instance=ExtResource( 4 )]
-position = Vector2( 205, 930 )
+position = Vector2( 281, 995 )
+
+[node name="Enemy" parent="Entities" instance=ExtResource( 5 )]
+position = Vector2( 1429, 947 )
+
+[node name="Enemy2" parent="Entities" instance=ExtResource( 5 )]
+position = Vector2( 507, 834 )
+
+[node name="Enemy3" parent="Entities" instance=ExtResource( 5 )]
+position = Vector2( 1709, 517 )
