@@ -17,3 +17,8 @@ func _input(event):
 func _on_CKeyboard_update_direction(d):
 	if self.scale.x != d:
 		self.scale.x = d
+
+
+func _on_Sword_body_entered(body):
+	if body is Entity:
+		body.take_damage(35)

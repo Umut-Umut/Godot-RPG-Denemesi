@@ -31,7 +31,7 @@ func _physics_process(delta):
 		input_direction = -1
 		emit_signal("update_direction", input_direction)
 	
-	var speed = run_speed if Input.is_action_pressed("l_shift") else walk_speed
+	var speed = run_speed if parent.is_on_floor() and Input.is_action_pressed("l_shift") else walk_speed
 	velocity.x = input_direction * speed
 
 	# Yerçekimi

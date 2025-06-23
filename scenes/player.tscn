@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://scenes/Entitiy.tscn" type="PackedScene" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://scenes/CKeyboard.tscn" type="PackedScene" id=3]
 [ext_resource path="res://scripts/Sword.gd" type="Script" id=4]
+[ext_resource path="res://scripts/Player.gd" type="Script" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 30.0
@@ -12,6 +13,7 @@ radius = 30.0
 radius = 64.0
 
 [node name="Player" instance=ExtResource( 1 )]
+script = ExtResource( 5 )
 
 [node name="Sprite" parent="." index="0"]
 modulate = Color( 0.00784314, 0, 1, 1 )
@@ -31,3 +33,4 @@ position = Vector2( 48, 0 )
 shape = SubResource( 2 )
 
 [connection signal="update_direction" from="CKeyboard" to="Sword" method="_on_CKeyboard_update_direction"]
+[connection signal="body_entered" from="Sword" to="Sword" method="_on_Sword_body_entered"]
