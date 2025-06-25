@@ -1,3 +1,4 @@
+class_name Controller
 extends Node2D
 
 signal update_direction(d)
