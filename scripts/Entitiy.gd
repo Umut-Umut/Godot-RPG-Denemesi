@@ -2,9 +2,7 @@ class_name Entity
 extends Node2D
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+export var hp := 100
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -14,4 +12,7 @@ func _ready():
 
 
 func take_damage(damage):
+	hp -= damage
+	if hp <= 0:
+		self.queue_free()
 	prints(name, damage)

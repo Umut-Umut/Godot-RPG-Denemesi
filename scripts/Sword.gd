@@ -1,6 +1,17 @@
 extends Area2D
 
 
+onready var parent : KinematicBody2D = get_parent()
+
+
+export var dmg := 5
+
+
+func _ready():
+	if not parent:
+		print_debug("Sword, there is no parent.")
+
+
 func _input(event):
 	if event is InputEventKey:
 		if event.pressed and not event.echo:
@@ -20,5 +31,7 @@ func _on_CKeyboard_update_direction(d):
 
 
 func _on_Sword_body_entered(body):
-	if body is Entity:
-		body.take_damage(35)
+	if body == parent:
+		pass
+	elif body is Entity:
+		body.take_damage(dmg)
