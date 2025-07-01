@@ -9,6 +9,8 @@ func _ready():
 	print(name)
 
 
+func interact(_tool = null):
+	prints(name, "ellendi")
 
 
 func take_damage(damage):
