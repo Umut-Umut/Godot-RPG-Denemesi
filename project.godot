@@ -9,10 +9,20 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Node",
+"class": "Choice",
+"language": "GDScript",
+"path": "res://scripts/Choice.gd"
+}, {
 "base": "Node2D",
 "class": "Controller",
 "language": "GDScript",
 "path": "res://scripts/CKeyboard.gd"
+}, {
+"base": "PanelContainer",
+"class": "DialoguePanel",
+"language": "GDScript",
+"path": "res://scripts/DialoguePanel.gd"
 }, {
 "base": "Node2D",
 "class": "Entity",
@@ -20,13 +30,21 @@ _global_script_classes=[ {
 "path": "res://scripts/Entitiy.gd"
 }, {
 "base": "Entity",
+"class": "NPC",
+"language": "GDScript",
+"path": "res://scripts/NPC.gd"
+}, {
+"base": "Entity",
 "class": "Player",
 "language": "GDScript",
 "path": "res://scripts/Player.gd"
 } ]
 _global_script_class_icons={
+"Choice": "",
 "Controller": "",
+"DialoguePanel": "",
 "Entity": "",
+"NPC": "",
 "Player": ""
 }
 
@@ -35,6 +53,10 @@ _global_script_class_icons={
 config/name="rpg"
 run/main_scene="res://scenes/Main.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+Notification="*res://scripts/Notification.gd"
 
 [display]
 

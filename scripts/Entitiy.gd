@@ -10,7 +10,7 @@ func _ready():
 
 
 func interact(_tool = null):
-	prints(name, "ellendi")
+	pass
 
 
 func take_damage(damage):

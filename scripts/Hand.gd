@@ -21,5 +21,7 @@ func set_monitoring(value: bool):
 func _on_Hand_body_entered(body):
 	if body is Player:
 		pass
+	elif body is NPC:
+		body.dialogue()
 	elif body is Entity:
 		body.interact()

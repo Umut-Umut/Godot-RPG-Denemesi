@@ -1,8 +1,8 @@
 extends Node
 
 
-enum NotificationTypes {
-	
+enum Types {
+	DialogueStarted
 }
 
 
@@ -19,11 +19,11 @@ func register_observer(observer : Node, notification_type : int):
 		observers[notification_type] = [observer]
 
 
-func notify(notification_type : int):
+func notify(notification_type : int, params : Array = []):
 	var group : Array = observers.get(notification_type, [])
 	if not group:
 		prints("Bu bildirimi dinleyen kimse yok", notification_type)
 		return
 	
 	for observer in group:
-		observer._on_Notify(notification_type)
+		observer._on_Notify(notification_type, params)
