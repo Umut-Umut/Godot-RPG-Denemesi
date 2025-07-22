@@ -1,0 +1,167 @@
+[gd_resource type="Resource" load_steps=2 format=2]
+
+[ext_resource path="res://addons/dialogue_nodes/objects/DialogueData.gd" type="Script" id=1]
+
+[resource]
+script = ExtResource( 1 )
+starts = {
+"giris": "0_1"
+}
+nodes = {
+"0_1": {
+"link": "1_1",
+"offset": Vector2( -360.128, -503.611 ),
+"start_id": "giris"
+},
+"1_1": {
+"dialogue": "Selam! Nasılsın?",
+"offset": Vector2( -120, -580 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_7",
+"text": "İyiyim, sen? "
+},
+1: {
+"condition": {
+},
+"link": "1_3",
+"text": "Sence nasılım? "
+},
+2: {
+"condition": {
+},
+"link": "1_4",
+"text": "Bu konuşma ne zaman bitecek?"
+}
+},
+"size": Vector2( 300, 273.75 ),
+"speaker": ""
+},
+"1_2": {
+"dialogue": "Bugün dışarı çıktın mı?",
+"offset": Vector2( 280, -660 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_5",
+"text": "Evet çıktım."
+},
+1: {
+"condition": {
+},
+"link": "1_6",
+"text": "Hayır, evdeydim."
+},
+2: {
+"condition": {
+},
+"link": "1_1",
+"text": "Bu konuşma başa dönsün."
+}
+},
+"size": Vector2( 300, 273.75 ),
+"speaker": ""
+},
+"1_3": {
+"dialogue": "Hmm... Sence ben ne hissediyorum?",
+"offset": Vector2( 320, -340 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": "Sıkılmışsın gibi."
+},
+1: {
+"condition": {
+},
+"link": "1_6",
+"text": "Konuşmaya devam edelim."
+}
+},
+"size": Vector2( 300, 250.75 ),
+"speaker": ""
+},
+"1_4": {
+"dialogue": "Bu konuşma yalnızca sen unuttuğunda biter.",
+"offset": Vector2( 340, -20 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "END",
+"text": "Bu ne demek şimdi? "
+},
+1: {
+"condition": {
+},
+"link": "1_1",
+"text": "Başlasak mı yeniden?"
+}
+},
+"size": Vector2( 300, 250.75 ),
+"speaker": ""
+},
+"1_5": {
+"dialogue": "Temiz hava iyi gelir. Hangi yöne gittin?",
+"offset": Vector2( 649.656, -756.629 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "END",
+"text": "Batıya."
+},
+1: {
+"condition": {
+},
+"link": "END",
+"text": "Doğuya."
+}
+},
+"size": Vector2( 300, 250.75 ),
+"speaker": ""
+},
+"1_6": {
+"dialogue": " Hmm... Şimdilik bu kadar.",
+"offset": Vector2( 700, -460 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_1",
+"text": "Yeniden konuşalım. "
+},
+1: {
+"condition": {
+},
+"link": "END",
+"text": "Tamam, hoşça kal."
+}
+},
+"size": Vector2( 300, 250.75 ),
+"speaker": ""
+},
+"1_7": {
+"dialogue": "Ben de iyiyim, sag ol.",
+"offset": Vector2( 260, -960 ),
+"options": {
+0: {
+"condition": {
+},
+"link": "1_2",
+"text": ""
+}
+},
+"size": Vector2( 300, 220 ),
+"speaker": ""
+}
+}
+variables = {
+}
+comments = [  ]
+strays = [  ]
+characters = ""

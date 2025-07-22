@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/Main.gd" type="Script" id=1]
 [ext_resource path="res://scenes/World.tscn" type="PackedScene" id=2]
 [ext_resource path="res://scripts/GUI.gd" type="Script" id=3]
+[ext_resource path="res://addons/dialogue_nodes/objects/dialogueBox.gd" type="Script" id=4]
+[ext_resource path="res://addons/dialogue_nodes/objects/bbcodeWait.gd" type="Script" id=5]
+
+[sub_resource type="RichTextEffect" id=1]
+script = ExtResource( 5 )
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -14,11 +19,19 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
 
-[node name="Label" type="Label" parent="CanvasLayer/GUI"]
-anchor_left = 1.0
-anchor_right = 1.0
-margin_left = -1920.0
-margin_bottom = 1080.0
-text = "RPG Deneme"
+[node name="DialogueBox" type="PopupDialog" parent="CanvasLayer/GUI"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -339.0
+margin_top = -104.5
+margin_right = 339.0
+margin_bottom = 104.5
+rect_min_size = Vector2( 300, 72 )
+popup_exclusive = true
+script = ExtResource( 4 )
+options_vertical = true
+custom_effects = [ SubResource( 1 ) ]
 
 [node name="World" parent="." instance=ExtResource( 2 )]

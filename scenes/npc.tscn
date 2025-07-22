@@ -9,6 +9,7 @@ radius = 30.0167
 
 [node name="NPC" instance=ExtResource( 1 )]
 script = ExtResource( 3 )
+dialog = null
 
 [node name="Sprite" parent="." index="0"]
 modulate = Color( 0, 1, 0.0156863, 1 )

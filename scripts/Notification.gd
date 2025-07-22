@@ -1,6 +1,10 @@
 extends Node
 
 
+class NotifyData:
+	var dialog : DialogueData
+
+
 enum Types {
 	DialogueStarted
 }
@@ -19,11 +23,11 @@ func register_observer(observer : Node, notification_type : int):
 		observers[notification_type] = [observer]
 
 
-func notify(notification_type : int, params : Array = []):
+func notify(notification_type : int, data : NotifyData):
 	var group : Array = observers.get(notification_type, [])
 	if not group:
 		prints("Bu bildirimi dinleyen kimse yok", notification_type)
 		return
 	
 	for observer in group:
-		observer._on_Notify(notification_type, params)
+		observer._on_Notify(notification_type, data)

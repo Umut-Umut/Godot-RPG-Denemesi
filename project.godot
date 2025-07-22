@@ -9,6 +9,16 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "Resource",
+"class": "Character",
+"language": "GDScript",
+"path": "res://addons/dialogue_nodes/objects/Character.gd"
+}, {
+"base": "Resource",
+"class": "CharacterList",
+"language": "GDScript",
+"path": "res://addons/dialogue_nodes/objects/CharacterList.gd"
+}, {
 "base": "Node",
 "class": "Choice",
 "language": "GDScript",
@@ -19,15 +29,25 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://scripts/CKeyboard.gd"
 }, {
-"base": "PanelContainer",
-"class": "DialoguePanel",
+"base": "PopupDialog",
+"class": "DialogueBox",
 "language": "GDScript",
-"path": "res://scripts/DialoguePanel.gd"
+"path": "res://addons/dialogue_nodes/objects/dialogueBox.gd"
+}, {
+"base": "Resource",
+"class": "DialogueData",
+"language": "GDScript",
+"path": "res://addons/dialogue_nodes/objects/DialogueData.gd"
 }, {
 "base": "Node2D",
 "class": "Entity",
 "language": "GDScript",
 "path": "res://scripts/Entitiy.gd"
+}, {
+"base": "Control",
+"class": "MyDialogBox",
+"language": "GDScript",
+"path": "res://scripts/MyDialogBox.gd"
 }, {
 "base": "Entity",
 "class": "NPC",
@@ -38,14 +58,24 @@ _global_script_classes=[ {
 "class": "Player",
 "language": "GDScript",
 "path": "res://scripts/Player.gd"
+}, {
+"base": "RichTextEffect",
+"class": "RichTextWait",
+"language": "GDScript",
+"path": "res://addons/dialogue_nodes/objects/bbcodeWait.gd"
 } ]
 _global_script_class_icons={
+"Character": "",
+"CharacterList": "",
 "Choice": "",
 "Controller": "",
-"DialoguePanel": "",
+"DialogueBox": "",
+"DialogueData": "",
 "Entity": "",
+"MyDialogBox": "",
 "NPC": "",
-"Player": ""
+"Player": "",
+"RichTextWait": ""
 }
 
 [application]
@@ -62,6 +92,10 @@ Notification="*res://scripts/Notification.gd"
 
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/dialogue_nodes/plugin.cfg" )
 
 [input]
 
